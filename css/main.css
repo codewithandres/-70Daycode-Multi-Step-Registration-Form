@@ -11,7 +11,6 @@
 	--font-smaller: 14px;
 	--font-bigner: 20px;
 }
-
 * {
 	font-optical-sizing: auto;
 	font-style: normal;
@@ -36,6 +35,11 @@ body {
 	font-weight: 400;
 	line-height: 1.8;
 	color: var(--dark-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	*background: var(--dark-color);
 }
 
@@ -46,7 +50,6 @@ a {
 ul {
 	list-style: none;
 }
-
 h1,
 h2,
 h3 {
@@ -58,17 +61,15 @@ img {
 	max-width: 100%;
 	vertical-align: middle;
 }
-
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 2em;
 }
-
 .form-box {
 	display: flex;
-	flex-direction: row;
-	margin-top: 5em;
+	flex-direction: column;
+	/*margin-top: 5em;*/
 	border: 8px solid var(--ligther-color);
 	border-radius: 15px;
 	background-color: hsl(250, 100%, 99%);
@@ -78,7 +79,6 @@ img {
 	position: relative;
 	padding: 1em;
 }
-
 .logo {
 	font-size: 1.75em;
 	font-weight: 800;
@@ -86,28 +86,29 @@ img {
 	padding: 40px 48px;
 	text-align: center;
 }
-
 .logo span {
 	color: var(--main-color);
 }
 
 /* ===> styles  progres step */
-
+.progres-step {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+}
 .progres-step ul.progres-step {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 2em;
 }
-
 .progress ul.progres-step li {
 	position: relative;
 	display: flex;
 	align-items: flex-start;
 	margin-bottom: 2em;
 }
-
 .progress ul.progres-step li > span {
 	position: relative;
 	width: 40px;
@@ -130,9 +131,94 @@ img {
 .progress ul.progres-step li p span {
 	font-size: var(--font-smaller);
 	color: var(--ligther-color);
+	display: none;
+}
+.progress ul li p {
+	position: absolute;
+	top: -2em;
+	font-size: 12px;
+}
+/* ===> styles form  */
+.form-box form {
+	width: 100%;
+	padding: 3em 1em;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 30px 30px 15px 15px;
+}
+form > div {
+	max-width: 400px;
+	margin: 0 auto;
+}
+form > div p {
+	color: var(--light-color);
+	margin-bottom: 2em;
+}
+form > div > div:not(.checkbox) {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+form :where(input, select) {
+	height: 40px;
+	padding: 0 1em;
+	border-radius: 0.4em;
+	outline-color: var(--secundary-color);
+	border: 1px solid var(--ligther-color);
+	background-color: transparent;
+}
+form label {
+	font-size: var(--font-smaller);
+	margin-bottom: 0.5em;
+	font-weight: 600;
+}
+form .grouping {
+	display: flex;
+}
+form .grouping input {
+	max-width: 70px;
+	text-align: center;
+	margin-right: 1em;
+}
+form .checkbox input {
+	height: auto;
+}
+/* ===> styles button */
+.form-two,
+.form-three {
+	display: none;
+}
+.btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	margin-top: 2em;
+}
+.btn-group [class*='btn-'] {
+	background-color: var(--main-color);
+	color: white;
+	padding: 1em 2.5em;
+	border: 4px solid var(--secundary-color);
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background-color 300ms, border-color 2ms ease-out;
+}
+.btn-group [class*='btn-']:disabled {
+	background-color: var(--light-color);
+	border-color: var(--ligther-color);
+	cursor: text;
+}
+.btn-group [class*='btn-']:hover:not(:disabled) {
+	background-color: var(--dark-color);
+	border-color: var(--light-color);
+}
+::placeholder {
+	color: var(--light-color);
 }
 /* ===> styles responsive */
 @media screen and (min-width: 768px) {
+	.form-box {
+		flex-direction: row;
+	}
 	.form-box .progress {
 		flex: 1 0 35%;
 		min-width: 300px;
@@ -156,5 +242,16 @@ img {
 		width: 2px;
 		height: 65px;
 		background-color: var(--ligther-color);
+	}
+	.form-box form {
+		border-radius: 0 15px 15px 0;
+	}
+	.progress ul li p {
+		position: relative;
+		top: auto;
+		font-size: inherit;
+	}
+	.progress ul.progres-step li p span {
+		display: block;
 	}
 }
