@@ -1,0 +1,75 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* variable property */
+:root {
+	--main-color: hsl(247, 74%, 63%);
+	--secundary-color: hsl(244, 98%, 80%);
+	--ligther-color: hsl(240, 13%, 89%);
+	--light-color: hsl(240, 11%, 72%);
+	--dark-color: hsl(249, 8%, 34%);
+
+	--font-smaller: 14px;
+	--font-bigner: 20px;
+}
+
+* {
+	font-optical-sizing: auto;
+	font-style: normal;
+
+	margin: 0;
+	padding: 0;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.8;
+	color: var(--dark-color);
+	*background: var(--dark-color);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	line-height: 1.25;
+	margin: 0 0 0.5em;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+.form-box {
+	display: flex;
+	flex-direction: row;
+	margin-top: 5em;
+	border: 8px solid var(--ligther-color);
+	border-radius: 15px;
+	background-color: hsl(250, 100%, 99%);
+}
+/* ==> styling proggres */
