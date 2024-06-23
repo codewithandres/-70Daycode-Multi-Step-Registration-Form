@@ -43,7 +43,7 @@
                         <!-- step 1 -->
                         <div>
                             <label for="">Firts Name</label>
-                            <input type="text" placeholder="e.g Andres">
+                            <input type="text" placeholder="e.g Fabian">
                         </div>
 
                         <div>
@@ -54,9 +54,12 @@
                         <div class="birth">
                             <label>Date of Birth</label>
                             <div class="grouping">
-                                <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31">
-                                <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12">
-                                <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050">
+                                <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31"
+                                    placeholder="DD">
+                                <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12"
+                                    placeholder="MM">
+                                <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050"
+                                    placeholder="YYYY">
                             </div>
                         </div>
                     </div>
@@ -136,37 +139,36 @@
                                 <!-- Puedes seguir añadiendo más países aquí -->
                             </select>
                         </div>
-                        <!-- step 3 -->
-                        <div class="form-three form-step">
-                            <div class="bg-svg">
-                                <h2>Securuty</h2>
+                    </div>
+                    <!-- step 3 -->
+                    <div class="form-three form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Securuty</h2>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder="Your email adrees">
+                        </div>
+                        <div>
+                            <label>User Name</label>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Confirm password">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                            <label>Rececive our news letter and special offers</label>
+                        </div>
 
-                                <div>
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Your email adrees">
-                                </div>
-                                <div>
-                                    <label>User Name</label>
-                                    <input type="text" placeholder="Username">
-                                </div>
-                                <div>
-                                    <label>Password</label>
-                                    <input type="password" placeholder="Password">
-                                </div>
-                                <div>
-                                    <input type="password" placeholder="Confirm password">
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox">
-                                    <label>Rececive our news letter and special offers</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn-prev" disabled>Back</button>
-                            <button type="button" class="btn-prev" disabled>Next step</button>
-                            <button type="button" class="btn-prev" disabled>Submit</button>
-                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev" disabled>Back</button>
+                        <button type="button" class="btn-next">Next step</button>
+                        <button type="button" class="btn-submit">Submit</button>
                     </div>
                 </form>
             </div>
