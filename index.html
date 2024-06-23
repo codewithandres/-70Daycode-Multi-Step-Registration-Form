@@ -35,7 +35,32 @@
                         </li>
                     </ul>
                 </div>
-                <form action=""></form>
+                <form action="">
+                    <div class="form-one form-step">
+                        <div class="bg-svg"></div>
+                        <h2>Personal Information</h2>
+                        <p>Enter your personal information correctly</p>
+
+                        <div>
+                            <label for="">Firts Name</label>
+                            <input type="text" placeholder="e.g Andres">
+                        </div>
+
+                        <div>
+                            <label for="">Last Name</label>
+                            <input type="text" placeholder="e.g Andres">
+                        </div>
+
+                        <div class="birth">
+                            <label>Date of Birth</label>
+                            <div class="grouping">
+                                <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31">
+                                <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12">
+                                <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050">
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
