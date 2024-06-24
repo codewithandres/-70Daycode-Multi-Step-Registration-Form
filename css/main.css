@@ -181,11 +181,35 @@ form .grouping input {
 form .checkbox input {
 	height: auto;
 }
-/* ===> styles button */
-.form-two,
-.form-three {
+
+form > div:not(.btn-group) {
 	display: none;
 }
+form > div.active {
+	display: block;
+	animation: fadeIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+form > div .bg-svg{
+	width: 60px ;
+	height: 50px;
+	img{
+		width: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+/* ===> styles button */
 .btn-group {
 	display: flex;
 	flex-wrap: wrap;
@@ -212,6 +236,16 @@ form .checkbox input {
 }
 ::placeholder {
 	color: var(--light-color);
+}
+.btn-group .btn-submit,
+.form-three.active ~ .btn-group .btn-next {
+	display: none;
+}
+.form-three.active ~ .btn-group .btn-submit {
+	display: block;
+}
+.form-three.active ~ .btn-group {
+	justify-content: space-between;
 }
 /* ===> styles responsive */
 @media screen and (min-width: 768px) {

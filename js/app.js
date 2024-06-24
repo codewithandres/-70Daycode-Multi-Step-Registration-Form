@@ -7,15 +7,18 @@ let active = 1;
 
 nextButton.addEventListener('click', () => {
 	active++;
-	if (active > steps.length) active = steps.length;
+	if (active > steps.length){
+        active = steps.length;
+    } 
 
 	updateProgress();
 });
 
 prevButton.addEventListener('click', () => {
 	active--;
-	if (active < 1) active = 1;
-
+	if (active < 1) {
+        active = 1;
+    }
 	updateProgress();
 });
 
@@ -24,10 +27,11 @@ const updateProgress = () => {
 	console.log(`active => ${active}`);
 
 	steps.forEach((step, i) => {
-		if (i == active - 1) {
+
+		if (i === (active-1)) {
 			step.classList.add('active');
 			formSteps[i].classList.add('active');
-			console.log(`i => ${+1}`);
+			console.log(`i => ${+i}`);
 		} else {
 			step.classList.remove('active');
 			formSteps[i].classList.remove('active');
